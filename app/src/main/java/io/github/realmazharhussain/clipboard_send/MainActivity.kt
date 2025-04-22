@@ -28,14 +28,19 @@ class MainActivity : Activity() {
             return
         }
 
-        val text = clipboardManager.primaryClip?.takeIf { it.itemCount > 0 }?.getItemAt(0)?.coerceToText(this)?.toString() ?: run {
+        val clip = clipboardManager.primaryClip?.takeIf { it.itemCount > 0 } ?: run {
             showToast("Clipboard is empty")
             return
         }
 
         val intent = Intent(Intent.ACTION_SEND).apply {
-            type = "text/plain"
-            putExtra(Intent.EXTRA_TEXT, text)
+            val item = clip.getItemAt(0)
+            type = clip.description.getMimeType(0)
+            if (type == "text/plain") {
+                putExtra(Intent.EXTRA_TEXT, item.text)
+            } else {
+                putExtra(Intent.EXTRA_STREAM, item.uri)
+            }
         }
 
         val chooser: Intent = Intent.createChooser(intent, "Share via")
