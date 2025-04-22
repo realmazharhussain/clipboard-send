@@ -1,4 +1,4 @@
-package io.github.realmazharhussain.clipboardshare
+package io.github.realmazharhussain.clipboard_send
 
 import android.app.Activity
 import android.content.ActivityNotFoundException

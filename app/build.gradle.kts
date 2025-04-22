@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "io.github.realmazharhussain.clipboardshare"
+    namespace = "io.github.realmazharhussain.clipboard_send"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "io.github.realmazharhussain.clipboardshare"
+        applicationId = "io.github.realmazharhussain.clipboard_send"
         minSdk = 26
         targetSdk = 35
         versionCode = 1

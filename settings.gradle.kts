@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ClipboardShare"
+rootProject.name = "ClipboardSend"
 include(":app")
  
