@@ -1,6 +1,6 @@
 # ClipboardSend
 
-Share whatever you last copied
+An Android app that launches a share dialog for your clipboard content
 
 ## Download
 
